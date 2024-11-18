@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.try {
+  border: 2px solid blue;
+  background-color: aquamarine;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out 5s;
+  transition-delay: 2s;
+}
+
+.try:hover {
+  width: 350px;
+  background-color: goldenrod;
+  border: 5px solid darkblue;
+}

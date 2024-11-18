@@ -174,3 +174,22 @@
   }
   newList();
 }
+
+const notes = [50, 60, 70, 80, 90];
+for (let i in notes) {
+  console.log(notes[i]);
+}
+
+let toplam = 0;
+const salaries = [10000, 15000, 20000];
+for (let i in salaries) {
+  toplam += salaries[i];
+}
+console.log(`Toplam: ${toplam}`);
+
+const cars = ["BMW", "Volvo", "Mercedes"];
+let text = "";
+for (let car of cars) {
+  text += car + " ";
+}
+console.log(text);
