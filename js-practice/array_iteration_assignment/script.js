@@ -28,6 +28,11 @@
   console.log(multiplication);
 }
 
+{
+  const numbers = [1, 2, 3, 4, 5];
+  const cevap2 = numbers.reduce((acc, eleman) => (acc *= eleman), 1);
+  console.log(cevap2);
+}
 //! Bir dizideki ilk negatif sayının indeksini döndüren bir fonksiyon yazın.
 
 {
@@ -221,6 +226,22 @@
   console.log(upperFour);
 }
 
+//! Bir dizideki alt dizileri düz bir liste haline getiren bir fonksiyon yazın.
+
+{
+  const nestedArray = [
+    [1, 2, 3, 4],
+    [4, 5],
+    [6, 7, 8],
+    [9, 10, 11],
+  ];
+
+  let flatArray = (nestedArray) => {
+    return nestedArray.flat();
+  };
+  console.log(flatArray(nestedArray));
+}
+
 //! Bir dizideki kelimeleri harflere ayırıp düz bir liste haline getiren bir fonksiyon yazın.
 
 {
@@ -276,7 +297,19 @@ console.clear();
   oddEven();
 }
 
-//? Chat gpt reduce ile çözüm öneriyor daha kısa ve kolay
+{
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+  const [oddSum, evenSum] = numbers.reduce(
+    (acc, n) => {
+      n % 2 === 0 ? (acc[1] += n) : (acc[0] += n);
+      return acc;
+    },
+    [0, 0] // Başlangıç değeri: [oddSum, evenSum]
+  );
+
+  console.log([oddSum, evenSum]);
+}
 
 //! Bir dizide her bir elemandan, kendisinden sonra gelen sayıların toplamını hesaplayıp yeni bir dizi oluşturan bir algoritma yazın.
 
@@ -384,4 +417,3 @@ console.clear();
   console.log(numbers.slice(0, numbers.length).sort());
   console.log(numbers);
 }
-
